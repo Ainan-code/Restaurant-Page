@@ -1,3 +1,6 @@
+import _ from 'lodash';
+import'./style.css';
+import home from './homepage';
 
 
-console.log("Hello webpack");
+document.body.appendChild(home())
