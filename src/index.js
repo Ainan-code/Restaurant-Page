@@ -1,9 +1,14 @@
 import _ from 'lodash';
 import'./style.css';
-import home from './homepage';
+import { createHeadline, bgPic, someTxt} from './homepage';
 
 
-let content = document.getElementById("#content");
 
 
-content.appendChild(home());
+
+const divContent = document.querySelector("#content");
+
+divContent.appendChild(createHeadline());
+//document.body.appendChild(bgPic());
+
+divContent.appendChild(someTxt());

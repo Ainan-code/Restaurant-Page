@@ -1,11 +1,38 @@
+
 * {
     margin: 0;
     border: 0;
+    padding: 0;
+    box-sizing: border-box;
     
 }
-
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-size: contain;
+    background-image: url(./restobg.jpg);
+}
 #content {
     display: flex;
     justify-content: center;
     justify-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+ 
+}
+.heading {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding: 10px 0;
+    color: white;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    flex: 1;
 }
