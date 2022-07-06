@@ -3,4 +3,7 @@ import'./style.css';
 import home from './homepage';
 
 
-document.body.appendChild(home())
+let content = document.getElementById("#content");
+
+
+content.appendChild(home());
