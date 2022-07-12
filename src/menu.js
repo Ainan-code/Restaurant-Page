@@ -1,6 +1,7 @@
 const menu = () => {
    const container = document.createElement("div");
-   container.classList.add("menu-container")
+   container.classList.add("menu-container");
+   container.setAttribute("id", "menu");
    
    const menuItem1 = document.createElement("div");
    menuItem1.classList.add("menu-item1")
@@ -35,6 +36,10 @@ const menu = () => {
 
      container.append(menuItem1, menuItem2, menuItem3);
 
+
      return container
 
 }
+
+
+   export {menu}

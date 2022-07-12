@@ -4,21 +4,30 @@ import Resto from './restobg.jpg';
   const createHeadline = () => { 
     const nav = document.createElement("div");
     const ul = document.createElement("ul");
-    const li1 = document.createElement("li");
+    const homeTab = document.createElement("li");
     const a1 = document.createElement("a");
     const a2 = document.createElement("a");
     const a3 = document.createElement("a");
-    const li2 = document.createElement("li");
-    const li3 = document.createElement("li");
+    const menuTab = document.createElement("li");
+    const aboutTab = document.createElement("li");
 
     a1.textContent = "HOME";
     a2.textContent = "MENU";
     a3.textContent = "ABOUT";
+
    nav.classList.add("heading");
-   li1.appendChild(a1);
-   li2.appendChild(a2);
-   li3.appendChild(a3);
-   ul.append(li1, li2, li3);
+   homeTab.setAttribute("data-tab", "home");
+   menuTab.setAttribute("data-tab", "menu");
+   aboutTab.setAttribute("data-tab", "about");
+
+   homeTab.classList.add("active");
+   
+
+
+  homeTab.appendChild(a1);
+  menuTab.appendChild(a2);
+  aboutTab.appendChild(a3);
+   ul.append(homeTab, menuTab, aboutTab);
    nav.appendChild(ul)
   
 
@@ -36,6 +45,7 @@ import Resto from './restobg.jpg';
     p.textContent = ` This what your taste buds needs exactly  an exotic dish of balabal`
     
     containerDiv.classList.add("div-text");
+    containerDiv.setAttribute("id", "home");
     
     containerDiv.appendChild(aboutheader);
     containerDiv.appendChild(p);
