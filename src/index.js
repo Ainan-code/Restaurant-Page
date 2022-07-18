@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import'./style.css';
-import { createHeadline, bgPic, someTxt} from './homepage';
+import { createNavbar, bgPic, someTxt} from './homepage';
 import { menu } from './menu';
 import { About } from './about';
 
@@ -11,41 +11,55 @@ import { About } from './about';
 const divContent = document.querySelector("#content");
 
 
-divContent.appendChild(createHeadline());
+const header = document.createElement('div');
+
+const mainContent = document.createElement('div')
+
+const footer = document.createElement('div');
+
+header.appendChild(createNavbar());
 
 
-divContent.appendChild(someTxt());
+divContent.append(header, mainContent, footer);
+
+
 
 
 const tabs = document.querySelectorAll('[data-tab]');
-const _content = document.getElementsByClassName('active');
+
 
 const toggleContent = function () {
   
-    if (!this.classList.contains("active")) {
     
-        Array.from(_content).forEach( item => {
-          item.classList.remove('active');
-        });
-        this.classList.add('active');
         
-        let currentTab = this.getAttribute('data-tab');
+    let currentTab = this.getAttribute('data-tab');
 
       if(currentTab === "home") {
-        divContent.appendChild(someTxt())
+        mainContent.replaceChildren()
+       mainContent.appendChild(someTxt());
+        
+
+        
       }  
 
       if(currentTab === "menu") {
-        divContent.appendChild(menu())
+       
+        mainContent.replaceChildren()
+        mainContent.appendChild(menu());
+
+       
       } 
 
       if(currentTab === "about") {
-        divContent.appendChild(About())
+        mainContent.replaceChildren()
+        mainContent.appendChild(About());
+      
+      } 
       } 
 
 
-    }
-};
+    
+
 
 
 

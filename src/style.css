@@ -11,7 +11,9 @@ body {
     height: 100vh;
     background-size: cover;
     background-position: center;
-    background-image: url(./restobg.jpg);
+    background-image: url(./josephgz.jpg);
+    
+   
 }
 #content {
     display: flex;
@@ -20,7 +22,9 @@ body {
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(51,0,0, 0.6)
+    
+  
+  
 }
 .heading {
     display: flex;
@@ -71,10 +75,15 @@ body {
     justify-self: center;
     font-size: 30px;
     margin-bottom: 20px;
-    color: rgb(238, 189, 189);
+    color: #84cc16;
    
 }
 
 .div-text > p {
     font-size: 18px;
+}
+
+.heading > Ul > li:hover {
+    background-color: seagreen;
+   
 }

@@ -2,6 +2,7 @@ const menu = () => {
    const container = document.createElement("div");
    container.classList.add("menu-container");
    container.setAttribute("id", "menu");
+  
    
    const menuItem1 = document.createElement("div");
    menuItem1.classList.add("menu-item1")

@@ -1,8 +1,9 @@
 const About = () => {
    const container = document.createElement("div");
    
+   
    const abouttUs = document.createElement("h2");
-   header1.textContent = "US";
+   abouttUs.textContent = "US";
 
    const aboutInfo = document.createElement("p");
    aboutInfo.textContent = "hfdhf hfbsjfhsahfueufcnjxbfsjbfjsafsjaafsjbfjafbsjfbsbfsjfbjsfbjsbfsfsfbsfbsbfsbfsbfjsbfsbfjssbf"
