@@ -26,14 +26,14 @@ const menu = () => {
     menuItem2.append(title2, p2);
 
     const menuItem3 = document.createElement("div");
-    menuItem1.classList.add("menu-item3");
+    menuItem3.classList.add("menu-item3");
     const title3 = document.createElement("h5");
     const p3 = document.createElement("p");
  
     title3.textContent = "Tartuna box"
     p3.textContent = `lorem ipsum bsfj doesnt matter what the content is 
      25$`;
-     menuItem1.append(title3, p3);
+     menuItem3.append(title3, p3);
 
      container.append(menuItem1, menuItem2, menuItem3);
 

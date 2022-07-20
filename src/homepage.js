@@ -1,4 +1,4 @@
-import Resto from './restobg.jpg';
+
 
    
   const createNavbar = () => { 
@@ -41,7 +41,7 @@ import Resto from './restobg.jpg';
     
     const aboutheader = document.createElement("h2");  
     const p = document.createElement("p");
-    aboutheader.textContent = "Welcome TO La Nocha";
+    aboutheader.textContent = "Welcome To La NOCHA";
     p.textContent = ` This what your taste buds needs exactly  an exotic dish of balabal`
     
     containerDiv.classList.add("div-text");

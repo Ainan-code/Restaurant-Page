@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import'./style.css';
-import { createNavbar, bgPic, someTxt} from './homepage';
+import { createNavbar,  someTxt} from './homepage';
 import { menu } from './menu';
 import { About } from './about';
 
@@ -10,17 +10,39 @@ import { About } from './about';
 
 const divContent = document.querySelector("#content");
 
+const layout = (() => { 
 
-const header = document.createElement('div');
+  const header = document.createElement('div');
 
-const mainContent = document.createElement('div')
+  const mainContent = document.createElement('div')
+  
+  const footer = document.createElement('div');
+  footer.classList.add("footer")
+  
+  footer.innerText = "Made by Ainan@copyright2022   Photo by Joseph Gonzalez"
+  
+  header.appendChild(createNavbar());
+  return {
+    header, mainContent, footer
+  }
+  
 
-const footer = document.createElement('div');
+})();
 
-header.appendChild(createNavbar());
+  
+
+divContent.append(layout.header, layout.mainContent, layout.footer);
 
 
-divContent.append(header, mainContent, footer);
+
+window.onload = () => {
+ layout.mainContent.appendChild(someTxt());
+};
+
+
+
+
+
 
 
 
@@ -35,8 +57,8 @@ const toggleContent = function () {
     let currentTab = this.getAttribute('data-tab');
 
       if(currentTab === "home") {
-        mainContent.replaceChildren()
-       mainContent.appendChild(someTxt());
+       layout.mainContent.replaceChildren()
+       layout.mainContent.appendChild(someTxt());
         
 
         
@@ -44,15 +66,15 @@ const toggleContent = function () {
 
       if(currentTab === "menu") {
        
-        mainContent.replaceChildren()
-        mainContent.appendChild(menu());
+        layout.mainContent.replaceChildren()
+        layout.mainContent.appendChild(menu());
 
        
       } 
 
       if(currentTab === "about") {
-        mainContent.replaceChildren()
-        mainContent.appendChild(About());
+        layout.mainContent.replaceChildren()
+        layout.mainContent.appendChild(About());
       
       } 
       } 

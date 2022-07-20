@@ -2,22 +2,26 @@ const About = () => {
    const container = document.createElement("div");
    
    
-   const abouttUs = document.createElement("h2");
-   abouttUs.textContent = "US";
+   const abouttUs = document.createElement("div");
+   const heading1 = document.createElement("h2");
+   heading1.textContent = "About Us";
 
    const aboutInfo = document.createElement("p");
-   aboutInfo.textContent = "hfdhf hfbsjfhsahfueufcnjxbfsjbfjsafsjaafsjbfjafbsjfbsbfsjfbjsfbjsbfsfsfbsfbsbfsbfsbfjsbfsbfjssbf"
+   aboutInfo.innerText = `hfdhfhfbsjfhsahfueufcnjxbfsjbf
+                          jsafsjaafsjbfjafbsjfbsbfs`
 
 
-  const contactUs = document.createElement("h2");
-  contactUs.textContent = "Contact Us";
+  const contactUs = document.createElement("div");
+  const heading2 = document.createElement("h2");
+  heading2.textContent = "Contact Us";
   
-  const contactInfo = document.createElement("div");
+  const contactInfo = document.createElement("p");
 
-  contactInfo.textContent = "Adress: two streets one way Email: fake@gamail.com"
+  contactInfo.innerText = `Adress: two streets one way  
+                           Email: fake@gmail.com`;
 
-  abouttUs.appendChild(aboutInfo);
-  contactUs.appendChild(contactInfo);
+  abouttUs.append(heading1, aboutInfo );
+  contactUs.append(heading2, contactInfo);
 
   container.append(abouttUs, contactUs);
 
